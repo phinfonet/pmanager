@@ -8,16 +8,16 @@ typedef struct {
 } project;
 
 int main() {
-  char choice;
+  int choice;
   project *p;
   p = malloc(sizeof (project));
-  printf("Type a to add a project or q to quit: ");
-  scanf("%c", &choice);
-  while (strcmp(&choice, "a") == 0) {
+  printf("Type 1 to add a project or 2 to quit: ");
+  scanf("%i", &choice);
+  while (choice == 1) {
     printf("Type the project id: ");
     scanf("%i", &p->id);
-    puts("==========<end>==========");
-    printf("Type a to add a project or q to quit: ");
-    scanf("%c", &choice);
+    printf("==========<end>==========\n");
+    printf("Type 1 to add a project or 2 to quit: ");
+    scanf("%i", &choice);
   }
 }
